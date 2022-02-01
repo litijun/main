@@ -7,6 +7,45 @@
         margin: 50px auto;
         background:#FF9;
     }
+    #di1 {
+        undefined border: 1px solid #D3D3D3;
+        width: 700px;
+        height: 500px;
+        background-color: azure;
+    }
+
+    p {
+        undefined font-size: 10px;
+        color: #008000;
+    }
+
+    #di2 {
+        undefined border: 1px solid #FFFFFF;
+        width: 400px;
+        height: 400px;
+    }
+
+    #di3 {
+        undefined border: 1px solid #FFFFFF;
+        width: 400px;
+        height: 40px;
+        margin-left: 1.25rem;
+    }
+
+    #di4 {
+        undefined border: 1px solid #FFFFFF;
+        width: 400px;
+        height: 100px;
+        margin-left: 1.25rem;
+    }
+
+    .cla3 {
+        undefined text-align: center;
+    }
+
+    .disc {
+        list-style-type: disc;
+    }
 </style>
 <head>
 	<meta charset="utf-8">
@@ -47,34 +86,13 @@
 		<div style="font-size:27px">
 			下方为观众留言区
 		</div>
+		注：该功能处于测试阶段，留言不一定准确送达
 	</div>
-	<div id="txt">
-
-		<textarea id="text" value="" cols="80" rows="10"></textarea><br>
-
-		<button type="button" id="btn">评论留言</button>
-
-		<div id="lis">
-
-			<ol id="text_li">
-			</ol>
-
-		</div>
-
-	</div>
-	<script type="text/javascript">
-		var tet= document.getElementById("text");
-		var butt= document.getElementById("btn");
-		var tet_li= document.getElementById("text_li");
-		butt.onclick=function msg(){
-
-		var Li = document.createElement("li");
-		Li.innerHTML= tet.value;
-		tet_li.appendChild(Li);
-
-		}
-
-	</script>
+	<form action="sava_book.php" method="post">
+		<p>用户名<input type="text" name="username"></p>
+		<p>留言板<textarea name="content"></textarea></p>
+		<p><input type="submit" value="留言"></p>
+	</form>
 	<br>
 	<div align="center">
 		<font color="#0000FF">
