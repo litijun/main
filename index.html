@@ -1,4 +1,13 @@
 <html>
+<style>
+	#txt{ width:600px;height:600px;margin:200px auto; border:1px solid #C69;}
+    #lis {
+        width: 600px;
+        height: 300px;
+        margin: 50px auto;
+        background:#FF9;
+    }
+</style>
 <head>
 	<meta charset="utf-8">
 	<title>立体多维工作室官网</title>
@@ -24,16 +33,48 @@
 		<div style="font-size:30px">
 			<a href="https://www.bilibili.com/video/BV1LR4y1j7i6/">点我看高清版</a>
 		</div>
-			<br>
-			<br>
-			<video width="640px" height="360px" controls="controls">
-				<source src="movie.mp4" type="video/mp4">
-			</video>
-			<br>
+		<br>
+		<br>
+		<video width="640px" height="360px" controls="controls">
+			<source src="movie.mp4" type="video/mp4">
+		</video>
+		<br>
 		<div style="font-size:20px">
 			<a href="https://www.bilibili.com/video/BV1LR4y1j7i6/">播放卡慢点我跳转</a>
 		</div>
 	</div>
+	<div align="center">
+		<div style="font-size:27px">
+			下方为观众留言区
+		</div>
+	</div>
+	<div id="txt">
+
+		<textarea id="text" value="" cols="80" rows="10"></textarea><br>
+
+		<button type="button" id="btn">评论留言</button>
+
+		<div id="lis">
+
+			<ol id="text_li">
+			</ol>
+
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		var tet= document.getElementById("text");
+		var butt= document.getElementById("btn");
+		var tet_li= document.getElementById("text_li");
+		butt.onclick=function msg(){
+
+		var Li = document.createElement("li");
+		Li.innerHTML= tet.value;
+		tet_li.appendChild(Li);
+
+		}
+
+	</script>
 	<br>
 	<div align="center">
 		<font color="#0000FF">
